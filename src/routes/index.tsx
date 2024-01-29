@@ -5,10 +5,6 @@ import HomePage from "../pages/clients/home";
 import RegisterClient from "../pages/clients/register";
 import LoginClient from "../pages/clients/login";
 import SearchPage from "../pages/clients/search";
-import WaitingPayment from "../section/clients/waiting-payment";
-import PaymentAccepted from "../section/clients/payment-accepted";
-import CardPayment from "../section/clients/card-payment";
-import PaymentNavbar from "../section/clients/payment-navbar";
 import Payment from "../pages/clients/payment";
   
   const SetupRouters = () => {
