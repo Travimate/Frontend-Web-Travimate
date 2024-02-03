@@ -1,11 +1,12 @@
+import LayoutClient from "../../components/layout-clients/layout"
 import SearchSection from "../../section/clients/search-section"
 
 const SearchPage = () => {
   return (
-    <div>
+    <LayoutClient>
         <p>Judul</p>
         <SearchSection/>
-    </div>
+    </LayoutClient>
   )
 }
 

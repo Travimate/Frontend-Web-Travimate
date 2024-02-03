@@ -1,7 +1,10 @@
+import DateSlider from "./dateSlider"
 
 const InputField = () => {
   return (
-    <div>inputfield</div>
+    <div id="section-a"className="items-center">
+    <DateSlider/>
+    </div>
   )
 }
 
