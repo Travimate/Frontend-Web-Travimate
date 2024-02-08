@@ -4,7 +4,13 @@ import Citilink from '../../../assets/citilink.svg';
 import Planeline from '../../../assets/planeline.svg';
 
 
-type Props = {}
+type Props = {
+    airplane: string|null;
+};
+
+const props: Props = {
+    airplane: "Citilink",
+};
 
 const FlightCard = (props: Props) => {
   return (
@@ -14,7 +20,7 @@ const FlightCard = (props: Props) => {
             <div className='flex justify-between'>
                 <div className='flex justify-start'>
                     <img src={Citilink} className='pe-2' alt="Airplane" />
-                    <p className="text-black text-[28px] font-bold font-['Open Sans']">Citilink</p>
+                    <p className="text-black text-[28px] font-bold font-['Open Sans']">{props.airplane}</p>
                 </div>  
                 <a href="" className="text-blue-700 text-[20px] font-bold font-['Open Sans']">lihat detail</a>
             </div>
