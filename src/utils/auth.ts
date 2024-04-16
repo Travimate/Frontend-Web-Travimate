@@ -2,8 +2,11 @@ import Cookies from "js-cookie";
 
 const Auth = {
     isAuthorization() {
-        if (Cookies.get("token") || Cookies.get("refresh")) return true;
-        return null;
+        if (sessionStorage.getItem('at')){
+            return true
+        } else {
+            return null;
+        }        
     },
     getAccessToken() {
         return Cookies.get("token");

@@ -1,3 +1,5 @@
+import { GET_FLIGHT_API_URL } from "../../utils/endpoint";
+import travimatev2 from "../tavimatev2";
 import travimate from "../travimate";
 
 // Contoh misal ngambil api building
@@ -5,7 +7,7 @@ import travimate from "../travimate";
 const APIFlights = {
     async getAllFlight() {
         try {
-            const response = await travimate.get("/endpointnya disini");
+            const response = await travimatev2.get(`${GET_FLIGHT_API_URL}`);
             console.log(response);
             return response;
         } catch (error) {

@@ -5,6 +5,10 @@ import HomePage from "../pages/clients/home";
 import RegisterClient from "../pages/clients/register";
 import LoginClient from "../pages/clients/login";
 import SearchPage from "../pages/clients/search";
+import OrderDetailsPage from "../pages/clients/order-details";
+import ForgetPassword from "../pages/clients/forget-password";
+import Payment from "../pages/clients/payment";
+import UserMenuPage from "../pages/clients/usermenu";
   
   const SetupRouters = () => {
     return (
@@ -13,13 +17,21 @@ import SearchPage from "../pages/clients/search";
         <Route path="/" element={<HomePage/>} />
         <Route path="/register" element={<RegisterClient/>} />
         <Route path="/flight/search" element={<SearchPage/>} />
-        <Route path="/flight/details" element={''} />
+        <Route path="/forgot-password" element={<ForgetPassword/>} />
 
-        {/*Protected Routes*/}
-        <Route path="/home" element={<PrivateRoute />}>
-          <Route path="payment" element={''} />
-          <Route path="profile" element={''} />
+
+        <Route path="/" element={<PrivateRoute />}>
+          <Route path="profile" element={<UserMenuPage/>} />
+          <Route path="history" element={<UserMenuPage/>} />
+          <Route path="checkin" element={<UserMenuPage/>} />
+          <Route path="notification" element={<UserMenuPage/>} />
+          <Route path="logout" element={<UserMenuPage/>} />
+          <Route path="flight" element={<PrivateRoute />}>
+            <Route path="payment" element={<Payment/>} />
+            <Route path="order-details" element={<OrderDetailsPage/>} />
+          </Route>
         </Route>
+
   
         {/*Private Routes*/}
         <Route path="/login" element={<ProtectedRoute />}>

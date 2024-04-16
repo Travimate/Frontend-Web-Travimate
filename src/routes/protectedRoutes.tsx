@@ -3,9 +3,9 @@ import Auth from "../utils/auth";
 import AuthAdmin from "../utils/authAdmin";
 
 export function ProtectedRoute() {
-  // if (Auth.isAuthorization()) {
-  //   return <Navigate to="/admin-dashboard/dashboard" replace />;
-  // }
+  if (Auth.isAuthorization()) {
+    return <Navigate to="/" replace />;
+  }
 
   return <Outlet />;
 }

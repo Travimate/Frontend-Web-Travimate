@@ -5,14 +5,14 @@ import AuthAdmin from "../utils/authAdmin";
 import LayoutClient from "../components/layout-clients/layout";
 
 export function PrivateRoute() {
-  // if (!Auth.isAuthorization()) {
-  //   return <Navigate to="/login" replace />;
-  // }
+  if (!Auth.isAuthorization()) {
+    return <Navigate to="/login" replace />;
+  }
   
   return (
-    <LayoutClient>
+    <>
       <Outlet />
-    </LayoutClient>
+    </>
   );
 }
 
